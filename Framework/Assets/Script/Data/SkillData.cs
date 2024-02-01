@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Game
 {
 	[Serializable]
-	public class ShopData : IDisposable
+	public class SkillData : IDisposable
 	{
 		public int ShopID;
 
@@ -15,30 +15,36 @@ namespace Game
 		///  </summary>
 		public string Name;
 
+		/// <summary>
+		/// [카테고리]
+		/// </summary>
+		public SKILL_CATEGORY Category;
+
 		///  <summary>
 		///  [상세정보]
 		///  </summary>
 		public string Description;
 
-		///  <summary>
-		///  [가격]
-		///  </summary>
-		public int Price;
+		/// <summary>
+		/// [스킬효과]
+		/// </summary>
+		public int[] EfficacyArr;
 
 		///  <summary>
-		///  [패키지 아이템 목록]
+		///  [Icon]
 		///  </summary>
-		public int[] PackageID;
+		public string IconName;
 
 		private bool disposed = false;
 
-		public ShopData(int id, string name, int price, int[] packageID)
+		public SkillData(int id, string name, SKILL_CATEGORY category, string description, int[] efficacyArr, string iconName)
 		{
 			ShopID = id;
 			Name = name;
-			Description = "";
-			Price = price;
-			PackageID = packageID;
+			Category = category;
+			Description = description;
+			EfficacyArr = efficacyArr;
+			IconName = iconName;
 		}
 
 		public void Dispose()

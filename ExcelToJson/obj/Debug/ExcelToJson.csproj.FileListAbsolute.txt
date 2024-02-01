@@ -11,3 +11,16 @@ C:\Users\C\OneDrive\바탕 화면\포트폴리오\ExcelToJson\bin\Debug\Newtonso
 C:\Users\C\OneDrive\바탕 화면\포트폴리오\ExcelToJson\bin\Debug\Newtonsoft.Json.xml
 C:\Users\C\OneDrive\바탕 화면\포트폴리오\ExcelToJson\obj\Debug\ExcelToJson.MainForm.resources
 C:\Users\C\OneDrive\바탕 화면\포트폴리오\ExcelToJson\obj\Debug\ExcelToJson.csproj.CopyComplete
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\bin\Debug\ExcelToJson.exe.config
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\bin\Debug\ExcelToJson.exe
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\bin\Debug\ExcelToJson.pdb
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\bin\Debug\Newtonsoft.Json.dll
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\bin\Debug\Newtonsoft.Json.xml
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\obj\Debug\ExcelToJson.csproj.AssemblyReference.cache
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\obj\Debug\ExcelToJson.MainForm.resources
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\obj\Debug\ExcelToJson.Properties.Resources.resources
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\obj\Debug\ExcelToJson.csproj.GenerateResource.cache
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\obj\Debug\ExcelToJson.csproj.CoreCompileInputs.cache
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\obj\Debug\ExcelToJson.csproj.CopyComplete
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\obj\Debug\ExcelToJson.exe
+C:\Users\C\OneDrive\바탕 화면\포트폴리오\Portfolio\ExcelToJson\obj\Debug\ExcelToJson.pdb

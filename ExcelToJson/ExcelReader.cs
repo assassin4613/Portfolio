@@ -17,6 +17,9 @@ namespace ExcelToJson
         public Excel.Range Cells;
         public Excel.Range Range;
 
+        private const string TYPE_LIST = "[]";
+        private const string TYPE_ENUM = "enum:";
+
         public ExcelReader()
         {
             this.Application = new Excel.Application();
@@ -52,7 +55,20 @@ namespace ExcelToJson
             }
 
             return false;
-        }   
+        }
+
+        public string CheckHasSpecialType(int col)
+        {
+            string[] typeSpecialToken = { TYPE_LIST, TYPE_ENUM };
+
+            foreach (string type in typeSpecialToken)
+            {
+                if (this.Range.Cells[2, col].Value.ToString().Contains(type))
+                    return type;
+            }
+
+            return string.Empty;
+        }
 
         public JObject GetJsonArray()
         {
@@ -77,16 +93,27 @@ namespace ExcelToJson
                         string name = nameList[col - 1];
                         string value = "";
 
-                        if (Range.Cells[row, col].Value != null)
-                        {
-                            value = Range.Cells[row, col].Value.ToString();
-                        }
-                        else
-                        {
-                            value = this.CheckHasStringType(col) ? string.Empty : "-1";
-                        }
+                        string specialType = this.CheckHasSpecialType(col);
 
-                        jObject.Add(name, value);
+                        switch (specialType)
+                        {
+                            case TYPE_LIST:
+                                var sValue = this.GetArrayTypefValue(Range.Cells[row, col].Value.ToString());
+                                jObject.Add(name, sValue);
+                                break;
+                            default:
+                                if (Range.Cells[row, col].Value != null)
+                                {
+                                    value = Range.Cells[row, col].Value.ToString();
+                                }
+                                else
+                                {
+                                    value = this.CheckHasStringType(col) ? string.Empty : "-1";
+                                }
+
+                                jObject.Add(name, value);
+                                break;  
+                        }
                     }
                     jArray.Add(jObject);
                 }
@@ -96,6 +123,20 @@ namespace ExcelToJson
             }
 
             return null;
+        }
+
+        private JArray GetArrayTypefValue(string values)
+        {
+            JArray jArray = new JArray();
+
+            string[] strings = values.Split(',');
+
+            foreach(string str in strings)
+            {
+                jArray.Add(str);
+            }
+
+            return jArray;
         }
 
         public void Free()

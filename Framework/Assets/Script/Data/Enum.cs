@@ -6,7 +6,7 @@ namespace Game
 {
     public enum SKILL_CATEGORY
     {
-        FIRE,
+        FIRE = 0,
         WATER,
         EARTH
     }

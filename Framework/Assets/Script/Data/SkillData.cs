@@ -8,7 +8,7 @@ namespace Game
 	[Serializable]
 	public class SkillData : IDisposable
 	{
-		public int ShopID;
+		public int SkillID;
 
 		///  <summary>
 		///  [이름]
@@ -39,7 +39,7 @@ namespace Game
 
 		public SkillData(int id, string name, SKILL_CATEGORY category, string description, int[] efficacyArr, string iconName)
 		{
-			ShopID = id;
+			SkillID = id;
 			Name = name;
 			Category = category;
 			Description = description;

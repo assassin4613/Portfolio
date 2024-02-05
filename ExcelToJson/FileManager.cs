@@ -41,7 +41,7 @@ namespace ExcelToJson
             return File.Exists(NewFileName);
         }
 
-        public static void SaveJsonFile(JObject jsonDatas)
+        public static void SaveJsonFile(JArray jsonDatas)
         {
             File.WriteAllText(NewFileName, jsonDatas.ToString());
         }

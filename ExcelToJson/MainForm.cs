@@ -62,9 +62,9 @@ namespace ExcelToJson
             ExcelReader excelReader = new ExcelReader();
             this.ResultTextBox.Text = (string.Format("변수 갯수 : {0}", excelReader.Range.Columns.Count) + Environment.NewLine);
 
-            JObject dataJObject = excelReader.GetJsonArray();
+            JArray dataJArray = excelReader.GetJsonArray();
 
-            if (dataJObject == null)
+            if (dataJArray == null)
             {
                 if (MessageBox.Show("변환 실패 : 테이블 자료형 형식이 잘못되었습니다.", "툴을 종료합니다!!", MessageBoxButtons.OK,
                     MessageBoxIcon.Error, MessageBoxDefaultButton.Button1) == DialogResult.OK)
@@ -75,9 +75,9 @@ namespace ExcelToJson
             }
             else
             {
-                this.ResultTextBox.Text += (string.Format("객체 갯수 : {0}", dataJObject.Count) + Environment.NewLine);
+                this.ResultTextBox.Text += (string.Format("객체 갯수 : {0}", dataJArray.Count) + Environment.NewLine);
                 this.ResultTextBox.Text += ("변환 종료 저장합니다============" + Environment.NewLine);
-                FileManager.SaveJsonFile(dataJObject);
+                FileManager.SaveJsonFile(dataJArray);
 
                 excelReader.Free();
             }

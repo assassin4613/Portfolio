@@ -70,9 +70,8 @@ namespace ExcelToJson
             return string.Empty;
         }
 
-        public JObject GetJsonArray()
+        public JArray GetJsonArray()
         {
-            JObject dataJObject = new JObject();
             JArray jArray = new JArray();
 
             List<string> nameList = new List<string>();
@@ -117,9 +116,7 @@ namespace ExcelToJson
                     }
                     jArray.Add(jObject);
                 }
-                dataJObject.Add("data", jArray);
-
-                return dataJObject;
+                return jArray;
             }
 
             return null;
